@@ -69,17 +69,14 @@
       <p>Donate Food &copy; 2023</p>
     </footer>
   </body>
-     <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-  <script type="module">
-   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-    // Add Firebase products that you want to use
-    import { getAuth } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js'
-    import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js'
-   
-    const firebaseConfig = {
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
     apiKey: "AIzaSyDLkeddziTg3KSs4xN0sRSSzEfn0WBNJh0",
     authDomain: "food-fba3f.firebaseapp.com",
     databaseURL: "https://food-fba3f-default-rtdb.firebaseio.com",
@@ -88,33 +85,11 @@
     messagingSenderId: "544146435715",
     appId: "1:544146435715:web:58c059a39d85670cbe35b6"
   };
-  
-firebase.initializeApp(firebaseConfig);
- document.getElementById("donate-form").addEventListener("b1", submitForm);
 
-function submitForm(e) {
-  e.preventDefault();
-
-  var name = getElementVal("name");
-  var emailid = getElementVal("email");
-  var phone = getElementVal("phone");
-  var address = getElementVal("address");
-  var description = getElementVal("description");
-
-  saveMessages(name, emailid, phone, address, description);
-
-  //   enable alert
-  document.querySelector(".alert").style.display = "block";
-
-  //   remove the alert
-  setTimeout(() => {
-    document.querySelector(".alert").style.display = "none";
-  }, 3000);
-
-  //   reset the form
-  document.getElementById("donate-form").reset();
-}
-  </script>
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+   <script src="./mail.js"></script>
 
 
   
