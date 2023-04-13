@@ -45,7 +45,7 @@
           <label for="description"><b>Description</b></label>
           <textarea placeholder="Enter Description" name="description" required></textarea><br>
 
-          <button type="submit" id="b1" name="b1">Submit</button>
+          <button type="b1" id="b1" name="b1">Submit</button>
         </form>
       </section>
       <section id="contact">
@@ -61,7 +61,7 @@
           <label for="message"><b>Message</b></label>
           <textarea placeholder="Enter Message" name="message" required></textarea> <br>
 
-          <button type="submit">Send</button>
+          <button type="submit1">Send</button>
         </form>
       </section>
     </main>
@@ -70,14 +70,14 @@
     </footer>
   </body>
      <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
-  <script type="module">
+  <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js">
    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
 
     // Add Firebase products that you want to use
     import { getAuth } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js'
     import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js'
-    
+   
     const firebaseConfig = {
     apiKey: "AIzaSyDLkeddziTg3KSs4xN0sRSSzEfn0WBNJh0",
     authDomain: "food-fba3f.firebaseapp.com",
@@ -88,7 +88,8 @@
     appId: "1:544146435715:web:58c059a39d85670cbe35b6"
   };
   
- firebase.initializeApp(firebaseConfig);
+const app=initializeApp(firebaseConfig);
+console.log(app);
  document.getElementById("b1").addEventListener("submit", submitForm);
 
 function submitForm(e) {
