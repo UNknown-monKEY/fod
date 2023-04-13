@@ -1,4 +1,4 @@
-var database =firebase.app();
+var database =firebase.database();
 
 function submitForm(e) {
   e.preventDefault();
