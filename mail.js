@@ -1,4 +1,17 @@
-var database =firebase.database();
+// var database =firebase.database();
+const firebaseConfig = {
+    apiKey: "AIzaSyDLkeddziTg3KSs4xN0sRSSzEfn0WBNJh0",
+    authDomain: "food-fba3f.firebaseapp.com",
+    databaseURL: "https://food-fba3f-default-rtdb.firebaseio.com",
+    projectId: "food-fba3f",
+    storageBucket: "food-fba3f.appspot.com",
+    messagingSenderId: "544146435715",
+    appId: "1:544146435715:web:58c059a39d85670cbe35b6"
+  };
+  //   copy your firebase config informations
+
+// initialize firebase
+firebase.initializeApp(firebaseConfig);
 
 function submitForm(e) {
   e.preventDefault();
