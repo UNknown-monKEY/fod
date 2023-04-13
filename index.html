@@ -45,7 +45,7 @@
           <label for="description"><b>Description</b></label>
           <textarea placeholder="Enter Description" name="description" required></textarea><br>
 
-          <button type="submit">Submit</button>
+          <button type="submit" id="b1" name="b1">Submit</button>
         </form>
       </section>
       <section id="contact">
@@ -89,7 +89,7 @@
   };
   
  firebase.initializeApp(firebaseConfig);
- document.getElementById("donate-form").addEventListener("submit", submitForm);
+ document.getElementById("b1").addEventListener("submit", submitForm);
 
 function submitForm(e) {
   e.preventDefault();
