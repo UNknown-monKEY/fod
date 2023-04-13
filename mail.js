@@ -15,7 +15,7 @@ function submitForm(e) {
         phone:phone,
         address:address,
         description:description,
-    )}
+    });
 
 
 
