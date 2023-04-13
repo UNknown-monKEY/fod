@@ -3,11 +3,11 @@ var database =firebase.database();
 function submitForm(e) {
   e.preventDefault();
 
-  var name = getElementVal("name");
-  var emailid = getElementVal("email");
-  var phone = getElementVal("phone");
-  var address = getElementVal("address");
-  var description = getElementVal("description");
+  var name = document.getElementById("name").value;
+  var emailid = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var address = document.getElementById("address").value;
+  var description = document.getElementById("description").value;
     
     database.ref('user/').push().set({
         name:name,
