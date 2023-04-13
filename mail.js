@@ -14,7 +14,7 @@ function submitForm(e) {
         emailid:emailid,
         phone:phone,
         address:address,
-        description=description,
+        description:description,
     }
 
 
